@@ -21,10 +21,6 @@
 
 		<label>Nome</label><br/>
 		<input type="text" name="nome"/><br/>
-		<!-- 
-		<label>Genero</label><br/>
-		<input type="text" name="genero"/><br/>
-		 -->
 		<button type="submit">
 			inserir banda
 		</button>

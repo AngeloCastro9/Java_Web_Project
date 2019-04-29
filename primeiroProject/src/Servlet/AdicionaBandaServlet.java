@@ -58,12 +58,9 @@ public class AdicionaBandaServlet extends HttpServlet {
     	
     	
     	PrintWriter out = response.getWriter();
-    	//out.println("O id usado foi o: " + request.getParameter("id"));
 		out.println("Nome do local é:" + request.getParameter("nome"));
 		out.println("o genero da banda é: " + request.getParameter("escolheBanda"));
 		
-		//String contato = request.getParameter("contato");
-		//long id1 = Integer.parseInt(request.getParameter("id1"));
         String.valueOf(request.getParameter("escolheBanda"));
         String.valueOf(request.getParameter("escolheBanda"));
         String.valueOf(request.getParameter("escolheBanda"));
@@ -72,43 +69,20 @@ public class AdicionaBandaServlet extends HttpServlet {
 		String FORRO = request.getParameter("escolheBanda");
 		String AXE = request.getParameter("escolheBanda");
 		
-		/*
-		 * Lembrando que os Try, Catch
-		 * Podem ser implementados de maneira global para o Tomcat
-		 * Exemplo:
-		 * 		<error-page>
-		 * 			<exception-type>java.lang.nullPointerException</exception-type>
-		 * 			<location>/erros.html</location>
-		 * 		</error-page>
-		 * 
-		 * 		<error-page>
-		 * 			<error-code>404</error-code>
-		 * 			<location>/404.html</location>
-		 * 		</error-page>
-		 */
-		
 		 Banda banda = new Banda();
-		 	//contato.setId(id);
-		 //	contato.setId(id);
-		// request.getSession().setAttribute("ROCK", ROCK);
 		 banda.setNome(nome);
 		 banda.setGenero(ROCK);
 		 banda.setGenero(FORRO);
 		 banda.setGenero(AXE);
 	        
 	        try {
-	        	
-		        
 		        BandaDao dao = new BandaDao(request, response);
 		        dao.adicionaBanda(banda);
 		        } catch (Exception a) {
 		        System.out.println("passei por aqui tentando adicionar na banda!!");
 		        a.printStackTrace();
-		              	
 		        }
-	    
-	    
-	    
+
 		        out.println("<html>");
 		        out.println("<body>");
 		        out.println("Banda " + banda.getNome() +
@@ -126,7 +100,6 @@ public class AdicionaBandaServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
@@ -134,7 +107,6 @@ public class AdicionaBandaServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

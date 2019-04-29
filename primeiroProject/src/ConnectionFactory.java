@@ -10,7 +10,7 @@ public class ConnectionFactory {
         	Class.forName("com.mysql.jdbc.Driver");
             System.out.println("Banco conectado");
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-            return DriverManager.getConnection("jdbc:mysql://localhost/bandas", "root", "H1m6d8f9");
+            return DriverManager.getConnection("jdbc:mysql://localhost/bandas", "root", "root");
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

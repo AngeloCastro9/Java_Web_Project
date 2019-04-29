@@ -43,13 +43,10 @@ public class AdicionaShowServlet extends HttpServlet {
 			if(request.getParameter("data").equals("")){
 				response.sendRedirect("index.jsp");
 			}else{
-				//passar o id como int
 				show.setLocal_Idlocal(Integer.parseInt(request.getParameter("local_idlocal")));
-				//local.setId(Long.parseLong(request.getParameter("local_idlocal")));
 				
 				java.util.Date data = null;
 	
-						//data = new SimpleDateFormat("yyyy/mm/dd").parse(dataTexto);
 				java.util.Date dt = new java.util.Date();
 
 					java.text.DateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd");

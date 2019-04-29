@@ -20,9 +20,6 @@ public enum TesteEnum implements Serializable {
 	public String getBandas() {
 		return bandas;
 	}
-
-	
-	
 }
 	
 	

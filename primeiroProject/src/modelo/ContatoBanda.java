@@ -61,8 +61,7 @@ public class ContatoBanda {
 		       	return this.capacidade;
 		       }
 			public void setCapacidade(String string) {
-				// TODO Auto-generated method stub
-				
+            				
 			}
        
     }
